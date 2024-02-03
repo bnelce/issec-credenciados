@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Icons } from "@/components/icons";
 import { ModeToggle } from "@/components/mode-toggle";
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
@@ -14,7 +13,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <p className="text-center text-sm leading-loose md:text-left">
             Desenvolvido por{" "}
             <a
-              href={siteConfig.links.twitter}
+              href="https://www.linkedin.com/in/abner-lima-oliveira/"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
