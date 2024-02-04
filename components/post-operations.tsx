@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { Post } from "@prisma/client"
+import { Post } from "@prisma/client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import * as React from "react";
 
+import { Icons } from "@/components/icons";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -14,41 +15,39 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { toast } from "@/components/ui/use-toast"
-import { Icons } from "@/components/icons"
+} from "@/components/ui/dropdown-menu";
+import { toast } from "@/components/ui/use-toast";
 
 async function deletePost(postId: string) {
   const response = await fetch(`/api/posts/${postId}`, {
     method: "DELETE",
-  })
+  });
 
   if (!response?.ok) {
     toast({
       title: "Something went wrong.",
       description: "Your post was not deleted. Please try again.",
       variant: "destructive",
-    })
+    });
   }
 
-  return true
+  return true;
 }
 
 interface PostOperationsProps {
-  post: Pick<Post, "id" | "title">
+  post: Pick<Post, "id" | "title">;
 }
 
 export function PostOperations({ post }: PostOperationsProps) {
-  const router = useRouter()
-  const [showDeleteAlert, setShowDeleteAlert] = React.useState<boolean>(false)
-  const [isDeleteLoading, setIsDeleteLoading] = React.useState<boolean>(false)
+  const router = useRouter();
+  const [showDeleteAlert, setShowDeleteAlert] = React.useState<boolean>(false);
+  const [isDeleteLoading, setIsDeleteLoading] = React.useState<boolean>(false);
 
   return (
     <>
@@ -60,16 +59,21 @@ export function PostOperations({ post }: PostOperationsProps) {
         <DropdownMenuContent align="end">
           <DropdownMenuItem>
             <Link href={`/editor/${post.id}`} className="flex w-full">
-              Edit
+              Ver Perfil
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <Link href={`/editor/${post.id}`} className="flex w-full">
+              Compartilhar
+            </Link>
+          </DropdownMenuItem>
+          {/* <DropdownMenuSeparator />
           <DropdownMenuItem
             className="flex cursor-pointer items-center text-destructive focus:text-destructive"
             onSelect={() => setShowDeleteAlert(true)}
           >
             Delete
-          </DropdownMenuItem>
+          </DropdownMenuItem> */}
         </DropdownMenuContent>
       </DropdownMenu>
       <AlertDialog open={showDeleteAlert} onOpenChange={setShowDeleteAlert}>
@@ -86,15 +90,15 @@ export function PostOperations({ post }: PostOperationsProps) {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction
               onClick={async (event) => {
-                event.preventDefault()
-                setIsDeleteLoading(true)
+                event.preventDefault();
+                setIsDeleteLoading(true);
 
-                const deleted = await deletePost(post.id)
+                const deleted = await deletePost(post.id);
 
                 if (deleted) {
-                  setIsDeleteLoading(false)
-                  setShowDeleteAlert(false)
-                  router.refresh()
+                  setIsDeleteLoading(false);
+                  setShowDeleteAlert(false);
+                  router.refresh();
                 }
               }}
               className="bg-red-600 focus:ring-red-600"
@@ -110,5 +114,5 @@ export function PostOperations({ post }: PostOperationsProps) {
         </AlertDialogContent>
       </AlertDialog>
     </>
-  )
+  );
 }

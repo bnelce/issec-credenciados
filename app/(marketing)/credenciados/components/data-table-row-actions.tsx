@@ -8,17 +8,9 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { labels } from "../data/data";
 import { taskSchema } from "../data/schema";
 
 interface DataTableRowActionsProps<TData> {
@@ -42,10 +34,10 @@ export function DataTableRowActions<TData>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
-        <DropdownMenuItem>Favorite</DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuItem>Ver Perfil</DropdownMenuItem>
+        <DropdownMenuItem>Compartilhar</DropdownMenuItem>
+        <DropdownMenuItem>Favoritar</DropdownMenuItem>
+        {/* <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>Labels</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
@@ -62,7 +54,7 @@ export function DataTableRowActions<TData>({
         <DropdownMenuItem>
           Delete
           <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );

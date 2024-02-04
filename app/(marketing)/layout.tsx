@@ -16,13 +16,13 @@ export default async function MarketingLayout({
           <MainNav items={marketingConfig.mainNav} />
           <nav>
             {/* <Link
-              href="/login"
+              href="/#credenciados"
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" }),
                 "px-4"
               )}
             >
-              Login
+              Pague-me um café
             </Link> */}
           </nav>
         </div>
