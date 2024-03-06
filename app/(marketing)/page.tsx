@@ -66,21 +66,6 @@ const posts = [
 ];
 
 export default async function IndexPage() {
-  // const [mail, setMail] = useMail();
-  function getBadgeVariantFromLabel(
-    label: string
-  ): ComponentProps<typeof Badge>["variant"] {
-    if (["work"].includes(label.toLowerCase())) {
-      return "default";
-    }
-
-    if (["personal"].includes(label.toLowerCase())) {
-      return "outline";
-    }
-
-    return "secondary";
-  }
-
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <main className="flex-1">

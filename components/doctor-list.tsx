@@ -47,10 +47,7 @@ function DoctorList({doctorList, heading='Mais Populares'}: Props) {
         :
         // Skelton Effect 
         [1,2,3,4,5,6].map((item,index)=>(
-            <div className='h-[220px] bg-slate-200 
-            w-full rounded-lg animate-pulse'>
-
-            </div>
+            <div className='h-[220px] bg-slate-200 w-full rounded-lg animate-pulse mb-4' key={index}></div>
         ))
        
         }
