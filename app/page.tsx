@@ -1,12 +1,7 @@
 import CategorySearch from "@/components/category-search";
 import DoctorList from "@/components/doctor-list";
 import Hero from "@/components/hero";
-import { buttonVariants } from "@/components/ui/button";
 import { doctors } from "@/data/doctor-list";
-import { cn } from "@/lib/utils";
-import { Badge } from "lucide-react";
-import { ComponentProps } from "react";
-
 
 const posts = [
   {
@@ -67,14 +62,14 @@ const posts = [
 
 export default async function IndexPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
       <main className="flex-1">
-      <div>        
-        <Hero/>        
-        <CategorySearch />
-        <DoctorList doctorList={doctors}/>
-    </div>
-      </main> 
+        <div>
+          <Hero />
+          <CategorySearch />
+          <DoctorList doctorList={doctors} />
+        </div>
+      </main>
     </div>
   );
 }

@@ -8,7 +8,7 @@ interface layoutProps {
 function layout({ children }: layoutProps) {
   return (
     <div className="grid grid-cols-4">
-      <div className="hidden md:block">
+      <div className="hidden md:block ">
         {/* Category  */}
         <CategoryList />
       </div>

@@ -16,9 +16,9 @@ function CategoryList() {
   const category = params.split("/")[2];
 
   return (
-    <div className="h-screen fixed mt-5 flex flex-col">
+    <div className="h-screen mt-5 flex flex-col">
       <Command>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Pesquisar categoria..." />
         <CommandList className="overflow-visible">
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">

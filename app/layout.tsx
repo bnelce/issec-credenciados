@@ -2,6 +2,8 @@ import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
 
 import { Analytics } from "@/components/analytics";
+import Footer2 from "@/components/footer";
+import { DashboardHeader } from "@/components/header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -77,10 +79,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Analytics />
-          <Toaster />
-          <TailwindIndicator />
+          <div className="md:px-20">
+            <DashboardHeader />
+            {children}
+            <Analytics />
+            <Toaster />
+            <TailwindIndicator />
+            {/*  <SiteFooter /> */}
+            <Footer2 />
+          </div>
         </ThemeProvider>
       </body>
     </html>
