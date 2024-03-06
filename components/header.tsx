@@ -2,34 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-
 export function DashboardHeader() {
-
-  const Menu=[
+  const Menu = [
     {
-        id:1,
-        name:'Home',
-        path:'/'
+      id: 1,
+      name: "Home",
+      path: "/",
     },
     {
-        id:2,
-        name:'Explore',
-        path:'/explore'
+      id: 2,
+      name: "Explore",
+      path: "/explore",
     },
     {
-        id:3,
-        name:'Contact Us',
-        path:'/'
+      id: 3,
+      name: "Contact Us",
+      path: "/",
     },
-]
+  ];
   return (
-    <div className='flex items-center 
-    justify-between p-4 shadow-sm'>
-        <div className='flex items-center gap-10'>
-            <Image src='/logo.svg' alt='logo'
-            width={180} height={80}
-            />
-            {/* <ul className='md:flex gap-8 hidden'>
+    <div
+      className="flex items-center 
+    justify-between p-4 shadow-sm"
+    >
+      <div className="flex items-center gap-10">
+        <Link href="/">
+          <Image src="/logo.svg" alt="logo" width={180} height={80} />
+        </Link>
+        {/* <ul className='md:flex gap-8 hidden'>
                 {Menu.map((item,index)=>(
                     <Link href={item.path} key={index}>
                     <li className='hover:text-primary
@@ -38,11 +38,9 @@ export function DashboardHeader() {
                     </Link>
                 ))}
             </ul> */}
-        </div>
-      
-        <Button>Pague-me um café</Button>
-      
-        
+      </div>
+
+      <Button>Pague-me um café</Button>
     </div>
-  )
+  );
 }
