@@ -2,7 +2,7 @@ export const categories = [
     {
         "id": 1,
         "attributes": {
-            "Name": "Dentist",
+            "Name": "Dentista",
             "createdAt": "2023-09-30T19:49:10.670Z",
             "updatedAt": "2023-09-30T19:49:10.670Z",
             "publishedAt": "2023-09-30T19:50:41.287Z",
@@ -131,7 +131,7 @@ export const categories = [
     {
         "id": 2,
         "attributes": {
-            "Name": "Cardiologist",
+            "Name": "Cardiologista",
             "createdAt": "2023-09-30T19:49:32.347Z",
             "updatedAt": "2023-09-30T19:49:32.347Z",
             "publishedAt": "2023-09-30T19:50:41.287Z",
@@ -244,7 +244,7 @@ export const categories = [
     {
         "id": 3,
         "attributes": {
-            "Name": "Orthopedic",
+            "Name": "Ortopedista",
             "createdAt": "2023-09-30T19:49:51.511Z",
             "updatedAt": "2023-09-30T19:49:51.511Z",
             "publishedAt": "2023-09-30T19:50:41.287Z",
@@ -285,7 +285,7 @@ export const categories = [
     {
         "id": 4,
         "attributes": {
-            "Name": "Neurologist",
+            "Name": "Neurologista",
             "createdAt": "2023-09-30T19:50:16.471Z",
             "updatedAt": "2023-09-30T19:50:16.471Z",
             "publishedAt": "2023-09-30T19:50:41.287Z",
@@ -362,7 +362,7 @@ export const categories = [
     {
         "id": 5,
         "attributes": {
-            "Name": "Otology",
+            "Name": "Otorrino",
             "createdAt": "2023-09-30T19:50:32.845Z",
             "updatedAt": "2023-09-30T19:50:32.845Z",
             "publishedAt": "2023-09-30T19:50:41.287Z",
@@ -422,7 +422,7 @@ export const categories = [
     {
         "id": 6,
         "attributes": {
-            "Name": "General Doctor",
+            "Name": "Clínico Geral",
             "createdAt": "2024-02-12T21:39:17.343Z",
             "updatedAt": "2024-02-12T21:39:22.058Z",
             "publishedAt": "2024-02-12T21:39:21.927Z",
@@ -500,7 +500,7 @@ export const categories = [
     {
         "id": 7,
         "attributes": {
-            "Name": "Surgon",
+            "Name": "Cirugião",
             "createdAt": "2024-02-12T21:39:38.288Z",
             "updatedAt": "2024-02-12T21:39:42.949Z",
             "publishedAt": "2024-02-12T21:39:42.821Z",
@@ -541,7 +541,7 @@ export const categories = [
     {
         "id": 8,
         "attributes": {
-            "Name": "Psychotropic",
+            "Name": "Psicoterapia",
             "createdAt": "2024-02-12T21:39:58.604Z",
             "updatedAt": "2024-02-12T21:40:03.248Z",
             "publishedAt": "2024-02-12T21:40:03.112Z",
@@ -619,7 +619,7 @@ export const categories = [
     {
         "id": 9,
         "attributes": {
-            "Name": "Eye Specilist",
+            "Name": "Oftalmologia",
             "createdAt": "2024-02-12T21:40:21.666Z",
             "updatedAt": "2024-02-12T21:40:25.060Z",
             "publishedAt": "2024-02-12T21:40:24.935Z",

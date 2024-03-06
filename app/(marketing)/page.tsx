@@ -81,14 +81,9 @@ export default async function IndexPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <main className="flex-1">
-      <div>
-        {/* Hero Section  */}
-        <Hero/>
-
-        {/* Search bar + Categories  */}
+      <div>        
+        <Hero/>        
         <CategorySearch />
-
-        {/* Popular Doctor List  */}
         {/* <DoctorList doctorList={doctorList}/> */}
     </div>
         <section
