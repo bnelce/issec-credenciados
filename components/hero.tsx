@@ -21,18 +21,16 @@ function Hero() {
 
       <div className="lg:py-24">
         <h2 className="text-4xl font-bold sm:text-4xl">
-            Find & Book 
-            <span className='text-primary'> Appointment </span> 
-            with your Fav 
-            <span className='text-primary '> Doctors</span></h2>
+            Encontre hospitais, clínicas e profissionais credenciados ao
+            <span className='text-primary'> ISSEC </span> 
+            {/* with your Fav 
+            <span className='text-primary '> Doctors</span> */}</h2>
 
         <p className="mt-4 text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis
-          eius quos ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius
-          quidem quam repellat.
+          Descubra uma ampla gama de profissionais de saúde credenciados para atender às suas necessidades, oferecendo qualidade e conveniência no plano de saúde dos servidores do governo do Ceará.
         </p>
 
-        <Button className="mt-10">Explore Now</Button>
+        {/* <Button className="mt-10">Explore Now</Button> */}
       </div>
     </div>
   </div>

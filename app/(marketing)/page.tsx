@@ -1,3 +1,4 @@
+import CategorySearch from "@/components/category-search";
 import Hero from "@/components/hero";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -85,7 +86,7 @@ export default async function IndexPage() {
         <Hero/>
 
         {/* Search bar + Categories  */}
-        {/* <CategorySearch/> */}
+        <CategorySearch />
 
         {/* Popular Doctor List  */}
         {/* <DoctorList doctorList={doctorList}/> */}
