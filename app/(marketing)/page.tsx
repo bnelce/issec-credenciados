@@ -1,9 +1,12 @@
 import CategorySearch from "@/components/category-search";
+import DoctorList from "@/components/doctor-list";
 import Hero from "@/components/hero";
 import { buttonVariants } from "@/components/ui/button";
+import { doctors } from "@/data/doctor-list";
 import { cn } from "@/lib/utils";
 import { Badge } from "lucide-react";
-import Link from "next/link";
+import { ComponentProps } from "react";
+
 
 const posts = [
   {
@@ -84,76 +87,9 @@ export default async function IndexPage() {
       <div>        
         <Hero/>        
         <CategorySearch />
-        {/* <DoctorList doctorList={doctorList}/> */}
+        <DoctorList doctorList={doctors}/>
     </div>
-        <section
-          id="credenciados"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800"
-        >
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-                Credenciados
-              </h2>
-              <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-                Filtre por especialidade, procedimento e veja o perfil de cada
-                um dos credenciados
-              </p>
-            </div>
-            <div>
-              {/* {posts.map((post) => (
-                    <PostItem key={post.id} post={post} />
-                  ))} */}
-              {posts.map((item) => (
-                <button
-                  key={item.id}
-                  className={cn(
-                    "flex flex-col w-full mt-2 items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent"
-                  )}
-                >
-                  <div className="flex w-full flex-col gap-1">
-                    <div className="flex items-center">
-                      <div className="flex items-center gap-2">
-                        <div className="font-semibold">{item.nome}</div>
-                        {/* {!item.read && (
-                              <span className="flex h-2 w-2 rounded-full bg-blue-600" />
-                            )} */}
-                      </div>
-                      <div
-                        className={cn(
-                          "ml-auto text-xs text-muted-foreground"
-                          /* mail.selected === item.id
-                                ? "text-foreground"
-                                : "text-muted-foreground" */
-                        )}
-                      >
-                        {item.municipio}
-                      </div>
-                    </div>
-                    <div className="text-xs font-medium">{item.endereco}</div>
-                  </div>
-                  <div className="line-clamp-2 text-xs text-muted-foreground">
-                    {item.nome.substring(0, 300)}
-                  </div>
-                  {item.especialidades.length ? (
-                    <div className="flex items-center gap-2">
-                      {item.especialidades.map((label) => (
-                        <Badge
-                          key={label}
-                          variant={getBadgeVariantFromLabel(label)}
-                        >
-                          {label}
-                        </Badge>
-                      ))}
-                    </div>
-                  ) : null}
-                </button>
-              ))}
-            </div>
-            )
-          </div>
-        </section>
-      </main>
+      </main> 
     </div>
   );
 }
