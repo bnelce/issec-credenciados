@@ -1,21 +1,48 @@
-interface DashboardHeaderProps {
-  heading: string
-  text?: string
-  children?: React.ReactNode
-}
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
-export function DashboardHeader({
-  heading,
-  text,
-  children,
-}: DashboardHeaderProps) {
+
+export function DashboardHeader() {
+
+  const Menu=[
+    {
+        id:1,
+        name:'Home',
+        path:'/'
+    },
+    {
+        id:2,
+        name:'Explore',
+        path:'/explore'
+    },
+    {
+        id:3,
+        name:'Contact Us',
+        path:'/'
+    },
+]
   return (
-    <div className="flex items-center justify-between px-2">
-      <div className="grid gap-1">
-        <h1 className="font-heading text-3xl md:text-4xl">{heading}</h1>
-        {text && <p className="text-lg text-muted-foreground">{text}</p>}
-      </div>
-      {children}
+    <div className='flex items-center 
+    justify-between p-4 shadow-sm'>
+        <div className='flex items-center gap-10'>
+            <Image src='/logo.svg' alt='logo'
+            width={180} height={80}
+            />
+            {/* <ul className='md:flex gap-8 hidden'>
+                {Menu.map((item,index)=>(
+                    <Link href={item.path} key={index}>
+                    <li className='hover:text-primary
+                    cursor-pointer hover:scale-105
+                    transition-all ease-in-out'>{item.name}</li>
+                    </Link>
+                ))}
+            </ul> */}
+        </div>
+      
+        <Button>Pague-me um café</Button>
+      
+        
     </div>
   )
 }

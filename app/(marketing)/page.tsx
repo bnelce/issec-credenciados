@@ -1,3 +1,4 @@
+import Hero from "@/components/hero";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Badge } from "lucide-react";
@@ -79,41 +80,16 @@ export default async function IndexPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Hospitais, clínicas e profissionais credenciados ao ISSEC
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Descubra uma ampla gama de profissionais de saúde credenciados
-                  para atender às suas necessidades, oferecendo qualidade e
-                  conveniência no plano de saúde dos servidores do governo do
-                  Ceará.
-                </p>
-              </div>
-              <div className="space-x-4">
-                <Link
-                  href="/#credenciados"
-                  className={cn(buttonVariants({ size: "lg" }))}
-                >
-                  Acesse aqui
-                </Link>
-                <Link
-                  href="/#credenciados"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "lg" })
-                  )}
-                >
-                  Pague-me um Café
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div>
+        {/* Hero Section  */}
+        <Hero/>
+
+        {/* Search bar + Categories  */}
+        {/* <CategorySearch/> */}
+
+        {/* Popular Doctor List  */}
+        {/* <DoctorList doctorList={doctorList}/> */}
+    </div>
         <section
           id="credenciados"
           className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800"
